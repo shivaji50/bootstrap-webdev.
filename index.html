@@ -4,78 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cigaret - Premium Cigarettes</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero {
+            background: url('Images/Marlboro Black.jpeg') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 4rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .product-card img {
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <h1>AshenCloud</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-peace" viewBox="0 0 16 16">
+                    <path d="M7.5 1.018a7 7 0 0 0-4.79 11.566L7.5 7.793zm1 0v6.775l4.79 4.79A7 7 0 0 0 8.5 1.018m4.084 12.273L8.5 9.207v5.775a6.97 6.97 0 0 0 4.084-1.691M7.5 14.982V9.207l-4.084 4.084A6.97 6.97 0 0 0 7.5 14.982M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8"/>
+                  </svg> 69Air
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section id="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <h2>Experience the Taste of Premium Cigarettes</h2>
-            <p>Smooth, rich, and crafted for those who appreciate quality.</p>
-            <a href="#products" class="cta-btn">Explore Our Products</a>
+            <h1 class="display-4">Experience Premium Cigarettes</h1>
+            <p class="lead">Crafted for those who appreciate the finer things in life.</p>
+            <a href="#products" class="btn btn-primary btn-lg">Explore Our Products</a>
         </div>
     </section>
 
-    <section id="products" class="container">
-        <h2>Our Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="2e3ede64-5ee7-4e42-b95f-42dada032ba5.jpeg" alt="Cigarette 1">
-                <h3>Classic Cigarettes</h3>
-                <p>Rich and smooth flavor for the classic experience.</p>
-            </div>
-            <div class="product">
-                <img src="60bd146d-a76e-4dc5-9c12-bcaa4a39b07b.jpeg" alt="Cigarette 2">
-                <h3>Menthol Cigarettes</h3>
-                <p>A refreshing twist with a cool menthol finish.</p>
-            </div>
-            <div class="product">
-                <img src="Sad.jpeg" alt="Cigarette 3">
-                <h3>Gold Cigarettes</h3>
-                <p>Premium tobacco for an elevated smoking experience.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="container">
-        <h2>About Us</h2>
-        <p>AshenCloud has been crafting premium cigarettes for over 50 years, offering a range of flavors and blends that cater to the sophisticated smoker. We are committed to providing quality products that meet the highest standards.</p>
-    </section>
-
-    <section id="contact" class="container">
-        <h2>Contact Us</h2>
-        <p>Have any questions? Reach out to us via our contact form or social media channels.</p>
-        <form action="#">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
+    <!-- Products Section -->
+    <section id="products" class="py-5">
         <div class="container">
-            <p>&copy; 2024 Cigaret. All rights reserved.</p>
+            <h2 class="text-center mb-4">Our Products</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card product-card mb-4">
+                        <img src="Images/2e3ede64-5ee7-4e42-b95f-42dada032ba5 1.56.57 PM.jpeg" class="card-img-top" alt="Classic Cigarettes">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Cigarettes</h5>
+                            <p class="card-text">Rich and smooth flavor for the classic experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card mb-4">
+                        <img src="Images/60bd146d-a76e-4dc5-9c12-bcaa4a39b07b 1.56.57 PM.jpeg" class="card-img-top" alt="Menthol Cigarettes">
+                        <div class="card-body">
+                            <h5 class="card-title">Menthol Cigarettes</h5>
+                            <p class="card-text">A refreshing twist with a cool menthol finish.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card mb-4">
+                        <img src="Images/Sad 1.57.06 PM.jpeg" class="card-img-top" alt="Gold Cigarettes">
+                        <div class="card-body">
+                            <h5 class="card-title">Gold Cigarettes</h5>
+                            <p class="card-text">Premium tobacco for an elevated smoking experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <p class="lead text-center">69Air has been crafting premium cigarettes for over 50 years, offering a range of flavors and blends that cater to the sophisticated smoker. We are committed to providing quality products that meet the highest standards.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <form action="#" class="w-75 mx-auto">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" class="form-control" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 69Air. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
